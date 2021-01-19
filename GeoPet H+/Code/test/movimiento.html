@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>APP</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container"> 
+		<div class="row">
+			<h1>--- MOVEMENT DETECTED ---</h1>
+			<a href="http://d3d9894e.ngrok.io/movimiento">Click here to save it</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//$("#send").click(function(){
+			//var articulo = $("#articulo").val();
+			//var precio = $("#precio").val();
+			
+			var n = 1;
+
+			if(n==0){
+				var obj = {
+					estado: "movimiento",
+					accion: "nomar foto"
+				};
+				$.post("/movimiento", obj, function(data){
+					console.log(data);
+				});
+			}	
+
+			if(n==1){
+				var obj = {
+					estado: "movimiento",
+					accion: "tomar foto"
+				};
+				$.post("/movimiento", obj, function(data){
+					console.log(data);
+				});
+			}
+
+		//});
+	</script>
+
+</body>
+</html>

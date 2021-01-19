@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>APP</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<!-- <div class="container"> 
+		<div class="row">
+			<h1>--- PROMOS DEL OXXO ---</h1>
+			<h2>Artículo: </h2><input type="text" id="articulo" name=""> <br>
+			<h2>Precio: </h2><input type="text" id="precio" name=""> <br><br>
+			<button class="btn btn-lg btn-success" id="send">Registrar Promo!</button>
+		</div>
+	</div>
+-->
+
+	<script type="text/javascript">
+		//$("#send").click(function(){
+			//var articulo = $("#articulo").val();
+			//var precio = $("#precio").val();
+			var n = 0;
+
+			if(n==1){
+				var obj = {
+					estado: "movimiento",
+					accion: "nomar foto"
+				};
+				$.post("/promos", obj, function(data){
+					console.log(data);
+				});
+			}	
+
+			if(n==0){
+				var obj = {
+					estado: "movimiento",
+					accion: "tomar foto"
+				};
+				$.post("/promos", obj, function(data){
+					console.log(data);
+				});
+			}
+		//});
+	</script>
+
+</body>
+</html>
